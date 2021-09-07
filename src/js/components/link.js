@@ -5,6 +5,8 @@ import WordCluster from "./word-cluster.js";
 
 import Util from "../util.js";
 
+// import { SVG } from '@svgdotjs/svg.js';
+// import '@svgdotjs/svg.draggable.js';
 class Link {
   /**
    * Creates a new Link between other entities.  Links can have Words or

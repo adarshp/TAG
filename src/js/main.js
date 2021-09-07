@@ -4,10 +4,12 @@
 
 import _ from "lodash";
 import $ from "jquery";
-import * as SVG from "svg.js";
+
+import { SVG } from '@svgdotjs/svg.js';
+//import '@svgdotjs/svg.draggable.js';
 
 import RowManager from "./managers/rowmanager";
-import LabelManager from "./managers/labelmanager";
+//import LabelManager from "./managers/labelmanager";
 import Taxonomy from "./managers/taxonomy";
 
 import Config from "./config";

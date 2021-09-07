@@ -1,3 +1,5 @@
+// import { SVG } from '@svgdotjs/svg.js';
+// import '@svgdotjs/svg.draggable.js';
 class Row {
   /**
    * Creates a new Row for holding Words.

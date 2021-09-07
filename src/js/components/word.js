@@ -14,7 +14,8 @@
  */
 
 import WordTag from "./word-tag.js";
-
+// import { SVG } from '@svgdotjs/svg.js';
+// import '@svgdotjs/svg.draggable.js';
 class Word {
   /**
    * Creates a new Word instance

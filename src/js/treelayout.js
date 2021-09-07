@@ -5,6 +5,8 @@
 import * as d3 from "d3";
 import Word from "./components/word.js";
 import Link from "./components/link.js";
+// import { SVG } from '@svgdotjs/svg.js';
+// import '@svgdotjs/svg.draggable.js';
 
 module.exports = (function() {
   // depth of recursion

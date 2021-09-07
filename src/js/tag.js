@@ -1,13 +1,12 @@
 /**
  * Instantiation and static functions
  */
-
 import Main from "./main";
 import _ from "lodash";
 
-import OdinParser from "../../Parsers/odin";
-import BratParser from "../../Parsers/brat";
-import OdinsonParser from "../../Parsers/odinson";
+import OdinParser from "./parsers/odin";
+import BratParser from "./parsers/brat";
+import OdinsonParser from "./parsers/odinson";
 
 // Parsers for the various annotation formats will be registered with the
 // main library, and will be inherited by individual TAG instances.

@@ -24,18 +24,19 @@
     "test": "jest --verbose",
     "watch": "npm run task -- watch:quick"
   },
+  "dependencies": {
+    "@svgdotjs/svg.draggable.js": "^3.0.2",
+    "@svgdotjs/svg.js": "^3.1.1"
+  },
   "devDependencies": {
-    "@babel/core": "^7.1.5",
-    "@babel/plugin-proposal-decorators": "^7.1.2",
-    "@babel/plugin-transform-runtime": "^7.1.0",
-    "@babel/preset-env": "^7.1.5",
-    "@babel/runtime": "^7.1.5",
-    "@svgdotjs/svg.js": "^3.0.16",
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-proposal-decorators": "^7.15.4",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.4",
+    "@babel/runtime": "^7.15.4",
     "autobind-decorator": "^2.2.1",
     "autoprefixer": "^9.3.0",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-eslint": "^10.0.1",
-    "babelify": "^10.0.0",
     "bootstrap": "^4.3.1",
     "bootstrap-colorpicker": "^3.0.3",
     "bootstrap-slider": "^10.4.2",
@@ -67,7 +68,6 @@
     "randomcolor": "^0.5.3",
     "rimraf": "^2.6.3",
     "sass": "^1.14.3",
-    "svg.draggable.js": "^2.2.1",
     "tasksfile": "^5.1.0",
     "tinyify": "^2.4.3",
     "watchify": "^3.11.1"
@@ -77,6 +77,5 @@
     "graphs",
     "nlp",
     "visualization"
-  ],
-  "dependencies": {}
+  ]
 }
