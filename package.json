@@ -28,11 +28,7 @@
       ]
     ]
   },
-  "exports": {
-    ".": "./dist/tag.mjs",
-    "./parsers/*": "./dist/parsers/*.mjs",
-    "./parsers/components/*": "./dist/parsers/components/*.mjs"
-  },
+  "main": "./dist/tag.mjs",
   "scripts": {
     "postbuild": "npm run task -- build:app:styles:all",
     "build": "babel src -d dist --keep-file-extension",
