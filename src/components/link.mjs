@@ -3,7 +3,7 @@ import $ from "jquery";
 import { WordTag } from "./word-tag.mjs";
 import { WordCluster } from "./word-cluster.mjs";
 
-import { sortForSlotting } from "../util.js";
+import { sortForSlotting } from "../util.mjs";
 
 // import { SVG } from '@svgdotjs/svg.js';
 // import '@svgdotjs/svg.draggable.js';

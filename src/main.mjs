@@ -9,7 +9,7 @@ import { SVG } from '@svgdotjs/svg.js';
 //import '@svgdotjs/svg.draggable.js';
 
 import { RowManager } from "./managers/rowmanager.mjs";
-import { Taxonomy } from "./managers/taxonomy.mjs";
+import { TaxonomyManager } from "./managers/taxonomy.mjs";
 
 import { Config } from "./config.mjs";
 
@@ -56,7 +56,7 @@ class Main {
     // Managers/Components
     this.rowManager = new RowManager(this.svg, this.config);
     this.labelManager = new LabelManager(this.svg);
-    this.taxonomyManager = new Taxonomy(this.config);
+    this.taxonomyManager = new TaxonomyManager(this.config);
 
     // Registered Parsers
     this.parsers = parsers;

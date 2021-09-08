@@ -3,7 +3,7 @@
  * associated elements in the visualisation
  */
 
-import _ from "lodash";
+import cloneDeep from "lodash";
 import randomColor from "randomcolor";
 import yaml from "js-yaml";
 
@@ -25,7 +25,7 @@ class TaxonomyManager {
 
     // An array containing the first n default colours to use (as a queue).
     // When this array is exhausted, we will switch to using randomColor.
-    this.defaultColours = _.cloneDeep(config.tagDefaultColours);
+    this.defaultColours = cloneDeep(config.tagDefaultColours);
   }
 
   /**
