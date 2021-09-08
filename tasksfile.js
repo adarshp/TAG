@@ -3,9 +3,9 @@
  * See https://github.com/pawelgalazka/tasksfile
  */
 
-const { sh, cli } = require("tasksfile");
-const chalk = require("chalk");
-const { performance } = require("perf_hooks");
+import { sh, cli } from "tasksfile";
+import chalk from "chalk";
+import { performance } from "perf_hooks";
 
 // Coloured output/logging
 // -----------------------
@@ -25,7 +25,7 @@ const config = {
   // Folder for built static assets -- Build tasks will put their output here
   assetsDir: "dist/tag",
   // Sub-folders for different file types
-  scriptsDir: "js",
+  scriptsDir: "src",
   stylesDir: "css"
 };
 
@@ -50,7 +50,7 @@ build.app.scripts = {
   // Main TAG bundle
   // -----------------
   async tag() {
-    const input = "src/js/tag.js";
+    const input = "src/tag.mjs";
     const output = `${config.assetsDir}/${config.scriptsDir}/tag.min.js`;
     const type = "Build";
     const desc = "Main TAG JS bundle";
@@ -66,7 +66,7 @@ build.app.scripts = {
     );
   },
   async quickTag() {
-    const input = "src/js/tag.js";
+    const input = "src/tag.mjs";
     const output = `${config.assetsDir}/${config.scriptsDir}/tag.js`;
     const type = "Build";
     const desc = "Main TAG JS bundle (Un-minified)";
@@ -148,7 +148,7 @@ build.app.docs = {
   // JSDoc
   // -----
   async jsdoc() {
-    const input = "src/js";
+    const input = "src";
     const output = "docs";
     const type = "Build";
     const desc = "Main TAG documentation";
@@ -288,7 +288,7 @@ const watch = {};
 
 watch.scripts = {
   async tag() {
-    const input = "src/js/tag.js";
+    const input = "src/tag.mjs";
     const output = `${config.assetsDir}/${config.scriptsDir}/tag.min.js`;
     const type = "Watch";
     const desc = "Main TAG JS bundle";
@@ -303,7 +303,7 @@ watch.scripts = {
     );
   },
   async quickTag() {
-    const input = "src/js/tag.js";
+    const input = "src/tag.mjs";
     const output = `${config.assetsDir}/${config.scriptsDir}/tag.js`;
     const type = "Watch";
     const desc = "Main TAG JS bundle (Un-minified)";
@@ -520,7 +520,7 @@ const demo = {
     async docs() {
       // This task regenerates the documentation whenever one of the
       // source files (or the JSDoc template) changes
-      const input = "src/**/*.js";
+      const input = "src/**/*.mjs";
       const input2 = "README.md";
       const input3 = "src/jsdoc-template/**/*";
       const output = `${config.assetsDir}/${config.stylesDir}/tag.css`;

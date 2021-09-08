@@ -11,10 +11,31 @@
   "bugs": {
     "url": "https://github.com/CreativeCodingLab/TextAnnotationGraphs/issues"
   },
-  "version": "1.0.1",
-  "main": "dist/tag/js/tag.js",
+  "type": "module",
+  "version": "1.0.2",
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime",
+      "@babel/plugin-proposal-export-default-from",
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ]
+    ]
+  },
+  "exports": {
+    ".": "./dist/tag.mjs",
+    "./parsers/*": "./dist/parsers/*.mjs",
+    "./parsers/components/*": "./dist/parsers/components/*.mjs"
+  },
   "scripts": {
-    "build": "npm run task -- build:all",
+    "postbuild": "npm run task -- build:app:styles:all",
+    "build": "babel src -d dist --keep-file-extension",
     "demo": "npm run task -- demo:run",
     "demo-build": "npm run task -- demo:build:all",
     "demo-watch": "npm run task -- demo:watch:all",
@@ -32,11 +53,13 @@
     "@babel/cli": "^7.15.4",
     "@babel/core": "^7.15.5",
     "@babel/plugin-proposal-decorators": "^7.15.4",
+    "@babel/plugin-proposal-export-default-from": "^7.14.5",
     "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/preset-env": "^7.15.4",
     "@babel/runtime": "^7.15.4",
-    "autobind-decorator": "^2.2.1",
+    "autobind-decorator": "^2.4.0",
     "autoprefixer": "^9.3.0",
+    "babelify": "^10.0.0",
     "bootstrap": "^4.3.1",
     "bootstrap-colorpicker": "^3.0.3",
     "bootstrap-slider": "^10.4.2",

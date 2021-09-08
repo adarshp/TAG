@@ -9,7 +9,7 @@
  * from the main folder to see your changes reflected.
  */
 // For your own projects, use `require("text-annotation-graphs")` instead
-const TAG = require("../../src/js/tag.js");
+const TAG = require("../../src/tag.mjs");
 
 const $ = require("jquery");
 const _ = require("lodash");
