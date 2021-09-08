@@ -83,4 +83,6 @@ class Token {
   }
 }
 
+// ES6 and CommonJS compatibility
 export default Token;
+module.exports = Token;

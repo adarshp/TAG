@@ -386,10 +386,12 @@ function Label(val, token) {
   this.type = "Label";
   this.val = val;
   this.token = token;
-};
+}; // ES6 and CommonJS compatibility
+
 
 var _default = Label;
 exports["default"] = _default;
+module.exports = Label;
 
 },{"@babel/runtime/helpers/classCallCheck":11,"@babel/runtime/helpers/interopRequireDefault":13}],3:[function(_dereq_,module,exports){
 "use strict";
@@ -449,10 +451,12 @@ function Link(eventId, trigger, args, relType) {
   this.arguments.forEach(function (arg) {
     arg.anchor.links.push(_this);
   });
-};
+}; // ES6 and CommonJS compatibility
+
 
 var _default = Link;
 exports["default"] = _default;
+module.exports = Link;
 
 },{"@babel/runtime/helpers/classCallCheck":11,"@babel/runtime/helpers/interopRequireDefault":13}],4:[function(_dereq_,module,exports){
 "use strict";
@@ -511,10 +515,12 @@ var LongLabel = /*#__PURE__*/function () {
     }
   }]);
   return LongLabel;
-}();
+}(); // ES6 and CommonJS compatibility
+
 
 var _default = LongLabel;
 exports["default"] = _default;
+module.exports = LongLabel;
 
 },{"@babel/runtime/helpers/classCallCheck":11,"@babel/runtime/helpers/createClass":12,"@babel/runtime/helpers/interopRequireDefault":13}],5:[function(_dereq_,module,exports){
 "use strict";
@@ -622,10 +628,12 @@ var Token = /*#__PURE__*/function () {
     }
   }]);
   return Token;
-}();
+}(); // ES6 and CommonJS compatibility
+
 
 var _default = Token;
 exports["default"] = _default;
+module.exports = Token;
 
 },{"./Label":2,"@babel/runtime/helpers/classCallCheck":11,"@babel/runtime/helpers/createClass":12,"@babel/runtime/helpers/interopRequireDefault":13}],6:[function(_dereq_,module,exports){
 "use strict";

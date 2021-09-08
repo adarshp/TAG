@@ -19,4 +19,6 @@ class Label {
   }
 }
 
+// ES6 and CommonJS compatibility
 export default Label;
+module.exports = Label;

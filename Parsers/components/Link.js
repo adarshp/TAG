@@ -48,4 +48,6 @@ class Link {
   }
 }
 
+// ES6 and CommonJS compatibility
 export default Link;
+module.exports = Link;

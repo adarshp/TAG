@@ -40,4 +40,6 @@ class LongLabel {
   }
 }
 
+// ES6 and CommonJS compatibility
 export default LongLabel;
+module.exports = LongLabel;
