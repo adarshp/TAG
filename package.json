@@ -12,9 +12,15 @@
     "url": "https://github.com/CreativeCodingLab/TextAnnotationGraphs/issues"
   },
   "version": "1.0.2",
-  "main": "./dist/tag.umd.js",
+  "main": "./dist/tag.cjs.js",
+  "module": "./dist/tag.esm.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "rm -rf dist && rollup -c",
+    "prepublish:public": "npm run build && npm run bump-version",
+    "publish:public": "npm publish --access public",
     "demo": "npm run task -- demo:run",
     "demo-build": "npm run task -- demo:build:all",
     "demo-watch": "npm run task -- demo:watch:all",

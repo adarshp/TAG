@@ -17,12 +17,12 @@ export default [
         format: 'umd'
       },
       {
-        file: "dist/tag.cjs.js",
+        file: pkg.main,
         name: "text-annotation-graphs",
         format: "cjs"
       },
       {
-        file: "dist/tag.esm.js",
+        file: pkg.module,
         name: "text-annotation-graphs",
         format: "esm"
       }
