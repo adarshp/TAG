@@ -13,7 +13,7 @@
   },
   "version": "1.0.2",
   "main": "./dist/tag.cjs.js",
-  "module": "./dist/tag.esm.js",
+  "module": "./dist/src/tag.esm.js",
   "files": [
     "dist"
   ],
