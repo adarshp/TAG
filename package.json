@@ -12,10 +12,29 @@
     "url": "https://github.com/CreativeCodingLab/TextAnnotationGraphs/issues"
   },
   "version": "1.0.2",
-  "main": "./dist/tag.umd.js",
-  "module": "./dist/tag.umd.js",
+  "main": "./dist/cjs/src/tag.js",
+  "module": "./dist/esm/src/tag.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/src/tag.mjs",
+      "require": "./dist/cjs/src/tag.js"
+    },
+    "./components/*": {
+      "import": "./dist/esm/src/components/*.mjs",
+      "require": "./dist/cjs/src/components/*.js"
+    },
+    "./parsers/*": {
+      "import": "./dist/esm/src/parsers/*.mjs",
+      "require": "./dist/cjs/src/parsers/*.js"
+    },
+    "./parsers/components": {
+      "import": "./dist/esm/src/parsers/components.mjs",
+      "require": "./dist/cjs/src/parsers/components.js"
+    }
+  },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "build": "rm -rf dist && rollup -c",

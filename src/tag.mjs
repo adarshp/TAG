@@ -27,6 +27,7 @@ const parsers = {
  *     the data.
  * @param {Object} [params.options] - Overrides for various default
  *     library options.
+* @param {Object} [params.parsers] - mapping of format -> parser
  */
 function tag(params) {
   // Core params
@@ -38,7 +39,11 @@ function tag(params) {
     params.options = {};
   }
 
-  const instance = new Main(params.container, params.options, parsers);
+  if (!params.parsers) {
+    params.parsers = parser;
+  }
+
+  const instance = new Main(params.container, params.options, params.parsers = parsers);
 
   // Initial data load
   if (params.data && params.format) {
@@ -47,21 +52,6 @@ function tag(params) {
   return instance;
 }
 
-/**
- * Registers the parser for a new annotation format.
- * @param {Object} parser - Parser object.
- * @param {String} format - Identifier for the annotation format
- *     associated with this parser.
- */
-function registerParser(parser, format) {
-  if (_.has(parsers, format)) {
-    throw "There is already a Parser registered for the given format.";
-  }
-
-  parsers[format] = parser;
-}
-
 export {
-  tag as TAG,
-  registerParser
+  tag as TAG
 };

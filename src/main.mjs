@@ -78,6 +78,17 @@ class Main {
     this._setupUIListeners();
   }
 
+
+  /**
+ * Registers the parser for a new annotation format.
+ * @param {Object} parser - Parser object.
+ * @param {String} format - Identifier for the annotation format
+ *     associated with this parser.
+ */
+  registerParser(parser, format) {
+    parsers[format] = parser;
+  }
+
   // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   // Loading data into the parser
 
@@ -211,7 +222,7 @@ class Main {
 
     // Tokens -> Words
     // Labels -> WordTags
-    // Records LongLabels to convert later.
+    // LongLabels to convert later.
     this.words = [];
     this.wordClusters = [];
     const longLabels = [];

@@ -12,25 +12,31 @@ export default [
 		input: `src/tag.mjs`,
     preserveModules: true,
     output: [
-      {
-        file: "dist/tag.umd.js",
-        name: "text-annotation-graphs",
-        format: 'umd'
+      // {
+      //   file: "dist/tag.umd.js",
+      //   name: "text-annotation-graphs",
+      //   format: 'umd'
+      // },
+      // {
+      //   file: pkg.main,
+      //   name: "text-annotation-graphs",
+      //   format: "cjs"
+      // },
+      // {
+      //   file: pkg.module,
+      //   name: "text-annotation-graphs",
+      //   format: "esm"
+      // },
+      { dir: "dist/cjs", 
+        format: "cjs", 
+        entryFileNames: "[name].js",
+        exports: `named`,
       },
-      {
-        file: pkg.main,
-        name: "text-annotation-graphs",
-        format: "cjs"
-      },
-      {
-        file: pkg.module,
-        name: "text-annotation-graphs",
-        format: "esm"
+      { dir: "dist/esm", 
+        format: "esm", 
+        entryFileNames: "[name].mjs",
+        exports: `named`,
       }
-      // { dir: "dist", 
-      //   format: "esm", 
-      //   entryFileNames: "[name].mjs" 
-      // }
     ],
 		plugins: [
       babel({
